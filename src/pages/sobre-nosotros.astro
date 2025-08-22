@@ -1,0 +1,122 @@
+---
+import HeroNosotros from "../components/astro/HeroNosotros.astro";
+import Layout from "../layouts/layout.astro";
+import PageAnimationInit from "../components/react/PageAnimationInit";
+
+const equipo = [
+  {
+    nombre: "Laura Sánchez",
+    rol: "Guía de montaña",
+    img: "https://deweap.ams3.cdn.digitaloceanspaces.com/alpine-summit.deweap.com/img/team/laura.png",
+    bio: "Más de 15 años guiando expediciones en los Alpes, Andes e Himalaya. Apasionada por la seguridad y el aprendizaje al aire libre.",
+  },
+  {
+    nombre: "David Romero",
+    rol: "Experto en senderismo",
+    img: "https://deweap.ams3.cdn.digitaloceanspaces.com/alpine-summit.deweap.com/img/team/david.png",
+    bio: "Organizador de trekkings y rutas para todos los niveles. Experto en interpretación ambiental y rutas familiares.",
+  },
+  {
+    nombre: "Ana López",
+    rol: "Logística de viajes",
+    img: "https://deweap.ams3.cdn.digitaloceanspaces.com/alpine-summit.deweap.com/img/team/ana.png",
+    bio: "La persona que lo hace posible: organización, permisos, reservas y trato cercano en todo momento.",
+  },
+  {
+    nombre: "Pablo Martín",
+    rol: "Guía de escalada",
+    img: "https://deweap.ams3.cdn.digitaloceanspaces.com/alpine-summit.deweap.com/img/team/pablo.png",
+    bio: "Instructor titulado en escalada, técnicas de supervivencia y primeros auxilios en montaña.",
+  },
+];
+---
+
+<Layout>
+  <PageAnimationInit client:load />
+  <HeroNosotros client:load />
+
+  <section class="w-full min-h-screen py-12 bg-black/98">
+    <div class="max-w-5xl mx-auto text-center px-4 mb-14">
+      <h2
+        class="nosotros-title text-xl md:text-2xl text-white font-bold mb-6 opacity-0 translate-y-10"
+      >
+        Profesionales apasionados por la montaña, el senderismo y la aventura.
+      </h2>
+      <p
+        class="nosotros-intro text-gray-400 max-w-2xl mx-auto opacity-0 translate-y-10"
+      >
+        Llevamos años acompañando a montañistas y aventureros de todos los
+        niveles por los picos, rutas y paisajes más espectaculares del mundo.
+        Nuestro objetivo: transmitir el amor por la naturaleza, la seguridad y
+        el espíritu de superación en cada experiencia.
+      </p>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+        {
+          equipo.map((miembro) => (
+            <div class="equipo-card flex flex-col items-center p-6 opacity-0 translate-y-10">
+              <img
+                src={miembro.img}
+                alt={miembro.nombre}
+                class="w-28 h-28 object-cover rounded-full border border-white mb-4 shadow"
+              />
+              <h3 class="font-extrabold text-lg text-amber-800">
+                {miembro.nombre}
+              </h3>
+              <p class="text-white font-semibold mb-2">{miembro.rol}</p>
+              <p class="text-gray-400 text-center text-sm">{miembro.bio}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div
+      class="filosofia-block max-w-6xl mx-auto mt-16 px-8 opacity-0 translate-y-10"
+    >
+      <h2 class="text-xl md:text-2xl font-bold text-white mb-4 text-center">
+        Nuestra filosofía
+      </h2>
+      <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
+        <div class="flex-1">
+          <ul class="text-gray-400 space-y-6 text-base md:text-lg">
+            <li>
+              <span class="font-semibold text-amber-800">Seguridad:</span> cada ruta
+              y expedición se diseña con el máximo rigor y profesionalidad.
+            </li>
+            <li>
+              <span class="font-semibold text-amber-800">Pasión:</span> vivimos la
+              montaña y queremos compartir esa energía contigo.
+            </li>
+            <li>
+              <span class="font-semibold text-amber-800">Respeto:</span> cuidamos
+              de la naturaleza y fomentamos un turismo responsable.
+            </li>
+            <li>
+              <span class="font-semibold text-amber-800">Cercanía:</span> atención
+              personalizada, grupos reducidos y acompañamiento constante.
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1 text-center md:text-left mb-12">
+          <h3 class="font-semibold text-amber-800 mb-2">¿Por qué elegirnos?</h3>
+          <p class="text-gray-400 mb-2">
+            +10 años de experiencia organizando expediciones en Europa, América,
+            África y Asia.<br />
+            Colaboración con guías locales, refugios y empresas de material técnico.<br
+            />
+            Más de 1.000 clientes satisfechos y nuevos amigos en la montaña.
+          </p>
+          <a
+            href="/alpine-summit/contacto"
+            class="inline-block mt-4 bg-white text-black font-bold px-4 py-1 rounded-md shadow hover:scale-105 transition"
+          >
+            Contacta con el equipo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

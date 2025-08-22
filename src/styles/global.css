@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Montserrat Variable", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.imagen-fondo-destinos {
+  background-image: url("https://deweap.ams3.cdn.digitaloceanspaces.com/alpine-summit.deweap.com/img/nieve.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

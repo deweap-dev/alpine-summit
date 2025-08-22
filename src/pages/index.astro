@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/layout.astro";
+import Hero from "../components/react/Hero";
+import ServiciosSection from "../components/react/ServiciosSection";
+import DestinosSection from "../components/react/DestinosSection";
+import SubscriptionSection from "../components/react/SubscriptionSection";
+import Testimonials from "../components/react/Testimonials";
+import PageAnimationInit from "../components/react/PageAnimationInit";
+---
+
+<Layout>
+  <PageAnimationInit client:load />
+  <Hero client:load />
+  <ServiciosSection client:load />
+  <DestinosSection client:load />
+  <Testimonials client:load />
+  <SubscriptionSection client:load />
+</Layout>

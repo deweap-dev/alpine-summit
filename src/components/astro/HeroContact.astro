@@ -1,0 +1,62 @@
+---
+
+---
+
+<section
+  class="contact-section w-full min-h-screen bg-cover bg-center relative flex items-center justify-center"
+  style={`background-image: url(https://deweap.ams3.cdn.digitaloceanspaces.com/alpine-summit.deweap.com/img/bosque2.png);`}
+>
+  <div class="absolute inset-0 bg-black/40"></div>
+  <div class="relative z-10 flex flex-col items-center w-full px-4 py-16">
+    <h1
+      class="contact-title text-white text-5xl sm:text-5xl font-extrabold mb-10 text-center drop-shadow opacity-0 translate-y-10"
+    >
+      Contacto
+    </h1>
+    <form
+      class="contact-form w-full max-w-lg p-6 md:p-10 flex flex-col gap-6 opacity-0 translate-y-10"
+    >
+      <div>
+        <label for="name" class="block mb-1 font-extrabold text-white"
+          >Nombre</label
+        >
+        <input
+          id="name"
+          type="text"
+          class="w-full border rounded-sm p-1 bg-white"
+          placeholder="Tu nombre"
+          required
+        />
+      </div>
+      <div>
+        <label for="email" class="block mb-1 font-extrabold text-white"
+          >Email</label
+        >
+        <input
+          id="email"
+          type="email"
+          class="w-full border rounded-sm p-1 bg-white"
+          placeholder="tu@email.com"
+          required
+        />
+      </div>
+      <div>
+        <label for="message" class="block mb-1 font-extrabold text-white"
+          >Mensaje</label
+        >
+        <textarea
+          id="message"
+          class="w-full border rounded-sm p-1 bg-white"
+          rows="4"
+          placeholder="¿En qué podemos ayudarte?"
+          required></textarea>
+      </div>
+      <button
+        type="submit"
+        class="w-full md:w-1/4 bg-white text-black px-4 py-1 rounded-md font-bold hover:scale-105 transition mt-4"
+      >
+        Enviar
+      </button>
+    </form>
+  </div>
+</section>

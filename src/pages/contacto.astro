@@ -1,0 +1,12 @@
+---
+import Layout from "../layouts/layout.astro";
+import HeroContact from "../components/astro/HeroContact.astro";
+import PageAnimationInit from "../components/react/PageAnimationInit";
+import SubscriptionSection from "../components/react/SubscriptionSection";
+---
+
+<Layout>
+    <HeroContact client:load />
+    <PageAnimationInit client:load />
+    <SubscriptionSection client:load />
+</Layout>

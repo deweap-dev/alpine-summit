@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/layout.astro";
+import HeroDestinations from "../components/astro/HeroDestinations.astro";
+import DestinationsSection from "../components/react/DestinationsSection";
+import PageAnimationInit from "../components/react/PageAnimationInit"
+---
+
+<Layout>
+  <div class="imagen-fondo-destinos">
+    <PageAnimationInit client:load />
+    <HeroDestinations client:load />
+    <DestinationsSection client:load />
+  </div>
+</Layout>
